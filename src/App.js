@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import RoutesProject from "./RoutesProject";
+import Navbar from "./components/Navbar";
+import { createContext, useState } from "react";
+
+export const ThemeContext = createContext(null);
+export const UserContext = createContext(null);
 
 function App() {
+  const [darkTheme, setDarkTheme] = useState(false);
+  const [user, setUser] = useState("Dogukan Dogan");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeContext.Provider value={darkTheme}>
+        <UserContext.Provider value={user}>
+          <Navbar setDarkTheme={setDarkTheme} />
+          <RoutesProject />
+        </UserContext.Provider>
+      </ThemeContext.Provider>
+    </>
   );
 }
 

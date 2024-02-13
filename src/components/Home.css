@@ -1,0 +1,20 @@
+.body-container {
+  position: relative;
+  text-align: center;
+}
+
+.background-image {
+  width: 100%;
+  opacity: 0.75;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 44px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}

@@ -1,0 +1,40 @@
+/* Navbar.css */
+
+.navbar {
+  background: linear-gradient(to right, #f0d974, #47370d);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+.navbar.dark {
+  background: linear-gradient(to right, #989898, #4e4e4e);
+  color: #fff;
+}
+
+.navbar.light {
+  background: linear-gradient(to right, #f0d974, #47370d);
+  color: #000;
+}
+
+.logo {
+  color: #a00000;
+  font-size: 28px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  margin-right: 40px;
+}
+
+.nav-list li {
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 23px;
+}
